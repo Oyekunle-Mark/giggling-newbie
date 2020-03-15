@@ -14,8 +14,8 @@ const App = () => (
       <View style={[styles.box, styles.magenta]}>
         <Text style={styles.boxText}>Magenta Box: #d33682</Text>
       </View>
-      <View style={[styles.box, styles.blue]}>
-        <Text style={styles.boxText}>Blue Box: #268bd2</Text>
+      <View style={[styles.box, styles.orange]}>
+        <Text style={styles.boxText}>Orange Box: #cb4b16</Text>
       </View>
     </View>
   </SafeAreaView>
@@ -45,6 +45,9 @@ const styles = StyleSheet.create({
   },
   magenta: {
     backgroundColor: '#d33682',
+  },
+  orange: {
+    backgroundColor: '#cb4b16',
   },
   boxText: {
     color: 'white',
