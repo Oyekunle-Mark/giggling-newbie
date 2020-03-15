@@ -3,14 +3,16 @@ import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 
 const App = () => (
   <SafeAreaView>
-    <View styles={styles}>
+    <View style={styles.container}>
       <Text>Hello, world!</Text>
     </View>
   </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
-  backgroundColor: 'teal',
+  container: {
+    backgroundColor: 'red',
+  },
 });
 
 export default App;
