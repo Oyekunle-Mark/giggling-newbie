@@ -25,29 +25,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  box: {
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 5,
-    borderRadius: 5,
-  },
-  cyan: {
-    backgroundColor: '#2aa198',
-  },
-  blue: {
-    backgroundColor: '#268bd2',
-  },
-  magenta: {
-    backgroundColor: '#d33682',
-  },
-  orange: {
-    backgroundColor: '#cb4b16',
-  },
-  boxText: {
-    color: 'white',
-    fontWeight: 'bold',
-  },
 });
 
 export default App;
