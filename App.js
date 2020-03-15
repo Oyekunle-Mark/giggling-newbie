@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 
 const App = () => (
-  <SafeAreaView>
+  <SafeAreaView style={styles.screen}>
     <View style={styles.container}>
       <Text>Hello, world!</Text>
     </View>
@@ -10,8 +10,14 @@ const App = () => (
 );
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+  },
   container: {
-    backgroundColor: 'red',
+    backgroundColor: 'pink',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
   },
 });
 
