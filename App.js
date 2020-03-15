@@ -5,10 +5,10 @@ const App = () => (
   <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.text}>Here are some boxes of different colors</Text>
-      <View style={styles.cyanBox}>
+      <View style={[styles.box, styles.cyan]}>
         <Text style={styles.boxText}>Cyan Box: #2aa198</Text>
       </View>
-      <View style={styles.blueBox}>
+      <View style={[styles.box, styles.blue]}>
         <Text style={styles.boxText}>Blue Box: #268bd2</Text>
       </View>
     </View>
@@ -25,19 +25,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  cyanBox: {
-    backgroundColor: '#2aa198',
+  box: {
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 5,
   },
-  blueBox: {
+  cyan: {
+    backgroundColor: '#2aa198',
+  },
+  blue: {
     backgroundColor: '#268bd2',
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 5,
   },
   boxText: {
     color: 'white',
