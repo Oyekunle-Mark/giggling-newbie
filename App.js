@@ -11,6 +11,12 @@ const App = () => (
       <View style={[styles.box, styles.blue]}>
         <Text style={styles.boxText}>Blue Box: #268bd2</Text>
       </View>
+      <View style={[styles.box, styles.magenta]}>
+        <Text style={styles.boxText}>Magenta Box: #d33682</Text>
+      </View>
+      <View style={[styles.box, styles.blue]}>
+        <Text style={styles.boxText}>Blue Box: #268bd2</Text>
+      </View>
     </View>
   </SafeAreaView>
 );
@@ -36,6 +42,9 @@ const styles = StyleSheet.create({
   },
   blue: {
     backgroundColor: '#268bd2',
+  },
+  magenta: {
+    backgroundColor: '#d33682',
   },
   boxText: {
     color: 'white',
