@@ -4,11 +4,16 @@ import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 const App = () => (
   <SafeAreaView>
     <View>
-      <Text>Hello, world!</Text>
+      <Text style={styles.text}>Here are some boxes of different colors</Text>
     </View>
   </SafeAreaView>
 );
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
 
 export default App;
