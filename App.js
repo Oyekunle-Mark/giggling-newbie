@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
   cyanBox: {
     backgroundColor: '#2aa198',
