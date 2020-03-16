@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default ({colorName, hexCode}) => {
+export default ({ colorName, hexCode }) => {
   const boxColor = {
     backgroundColor: hexCode,
   };
