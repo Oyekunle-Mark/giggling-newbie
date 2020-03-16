@@ -1,5 +1,11 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+} from 'react-native';
 
 export default ({ handlePress, palette }) => (
   <TouchableOpacity onPress={handlePress}>
@@ -8,7 +14,9 @@ export default ({ handlePress, palette }) => (
       horizontal={true}
       data={palette.colors.slice(0, 5)}
       keyExtractor={item => item.colorName}
-      renderItem={({ item }) => <Text>{item.colorName}</Text>}
+      renderItem={({ item }) => (
+        <View style={[styles.box, { backgroundColor: item.hexCode }]} />
+      )}
     />
   </TouchableOpacity>
 );
@@ -17,5 +25,11 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     fontSize: 18,
+    marginBottom: 10,
+  },
+  box: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
   },
 });
