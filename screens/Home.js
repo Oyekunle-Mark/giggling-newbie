@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 
+import PalettePreview from '../components/PalettePreview';
 import { COLOR_PALETTE } from '../data';
 
 export default ({ navigation }) => (
@@ -9,12 +10,18 @@ export default ({ navigation }) => (
       data={COLOR_PALETTE}
       keyExtractor={item => item.paletteName}
       renderItem={({ item }) => (
-        <TouchableOpacity
-          onPress={() => {
+        <PalettePreview
+          handlePress={() => {
             navigation.navigate('ColorPalette', item);
-          }}>
-          <Text>{item.paletteName}</Text>
-        </TouchableOpacity>
+          }}
+          palette={item}
+        />
+        // <TouchableOpacity
+        //   onPress={() => {
+        //     navigation.navigate('ColorPalette', item);
+        //   }}>
+        //   <Text>{item.paletteName}</Text>
+        // </TouchableOpacity>
       )}
     />
   </View>

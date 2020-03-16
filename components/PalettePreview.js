@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 export default () => (
-  <View>
-    <Text>Palette Preview</Text>
-  </View>
+  <TouchableOpacity
+    onPress={() => {
+      navigation.navigate('ColorPalette', item);
+    }}>
+    <Text>{item.paletteName}</Text>
+  </TouchableOpacity>
 );
