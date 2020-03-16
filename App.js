@@ -4,8 +4,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './screens/Home';
-import ColorPallete from './screens/ColorPallete';
+import ColorPalette from './screens/ColorPallete';
 
-const App = () => <NavigationContainer></NavigationContainer>;
+const Stack = createStackNavigator();
+
+const App = () => (
+  <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="ColorPalette" component={ColorPalette} />
+    </Stack.Navigator>
+  </NavigationContainer>
+);
 
 export default App;
