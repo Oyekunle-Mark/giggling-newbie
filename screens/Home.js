@@ -1,18 +1,21 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 
-import { COLORS } from '../data';
+import { COLOR_PALETTE } from '../data';
 
 export default ({ navigation }) => (
   <View>
-    <TouchableOpacity
-      onPress={() => {
-        navigation.navigate('ColorPalette', {
-          paletteName: 'Solarized',
-          colors: COLORS,
-        });
-      }}>
-      <Text>Solarized</Text>
-    </TouchableOpacity>
+    <FlatList
+      data={COLOR_PALETTE}
+      keyExtractor={item => item.paletteName}
+      renderItem={({ item }) => (
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('ColorPalette', item);
+          }}>
+          <Text>{item.paletteName}</Text>
+        </TouchableOpacity>
+      )}
+    />
   </View>
 );
