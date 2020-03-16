@@ -6,14 +6,13 @@ import { COLORS } from './data';
 const App = () => (
   <SafeAreaView>
     <View style={styles.container}>
-      <Text style={styles.text}>Here are some boxes of different colors</Text>
-
       <FlatList
         data={COLORS}
         keyExtractor={item => item.hexCode}
         renderItem={({ item }) => (
           <ColorBox colorName={item.colorName} hexCode={item.hexCode} />
         )}
+        ListHeaderComponent={<Text style={styles.text}>Solarized</Text>}
       />
     </View>
   </SafeAreaView>
