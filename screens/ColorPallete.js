@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, SafeAreaView } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, StyleSheet } from 'react-native';
 
 import ColorBox from '../components/ColorBox';
 import { COLORS } from '../data';
@@ -18,3 +18,15 @@ export default () => (
     </View>
   </SafeAreaView>
 );
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 10,
+    paddingTop: 30,
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+});
