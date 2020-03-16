@@ -10,7 +10,7 @@ const App = () => (
 
       <FlatList
         data={COLORS}
-        keyExtractor={(item, index) => index}
+        keyExtractor={item => item.hexCode}
         renderItem={({ item }) => (
           <ColorBox colorName={item.colorName} hexCode={item.hexCode} />
         )}
