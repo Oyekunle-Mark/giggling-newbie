@@ -4,7 +4,7 @@ import { View, Text, FlatList, StyleSheet } from 'react-native';
 import ColorBox from '../components/ColorBox';
 
 export default ({ route }) => {
-  const { paletteName, colors } = route.params;
+  const { colors } = route.params;
 
   return (
     <View style={styles.container}>
