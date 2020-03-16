@@ -32,6 +32,11 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     marginRight: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
   },
   list: {
     marginBottom: 20,
