@@ -14,7 +14,6 @@ export default ({ route }) => {
         renderItem={({ item }) => (
           <ColorBox colorName={item.colorName} hexCode={item.hexCode} />
         )}
-        ListHeaderComponent={<Text style={styles.text}>Solarized</Text>}
       />
     </View>
   );
