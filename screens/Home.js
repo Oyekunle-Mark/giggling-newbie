@@ -7,7 +7,7 @@ export default ({ navigation }) => (
       onPress={() => {
         navigation.navigate('ColorPalette');
       }}>
-      <Text>Hello Screen!</Text>
+      <Text>Solarized</Text>
     </TouchableOpacity>
   </View>
 );
