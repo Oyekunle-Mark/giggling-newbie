@@ -1,8 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
-export default () => (
+export default ({ navigation }) => (
   <View>
-    <Text>Hello Screen!</Text>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('ColorPalette');
+      }}>
+      <Text>Hello Screen!</Text>
+    </TouchableOpacity>
   </View>
 );
