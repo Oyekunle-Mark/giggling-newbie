@@ -16,12 +16,6 @@ export default ({ navigation }) => (
           }}
           palette={item}
         />
-        // <TouchableOpacity
-        //   onPress={() => {
-        //     navigation.navigate('ColorPalette', item);
-        //   }}>
-        //   <Text>{item.paletteName}</Text>
-        // </TouchableOpacity>
       )}
     />
   </View>
