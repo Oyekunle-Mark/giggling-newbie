@@ -22,12 +22,10 @@ export default ({ navigation }) => {
     setIsRefreshing(true);
     await fetchColorPalettes();
     setIsRefreshing(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     fetchColorPalettes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
