@@ -7,6 +7,14 @@ import PalettePreview from '../components/PalettePreview';
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 export default ({ navigation }) => {
+  const fetch_colors = useCallback(async () => {
+    const result = await fetch(URL);
+    const colors = await result.json();
+
+    if (result.ok) {
+    }
+  }, []);
+
   return (
     <FlatList
       style={styles.list}
