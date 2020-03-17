@@ -25,7 +25,7 @@ export default ({ navigation }) => {
   return (
     <FlatList
       style={styles.list}
-      data={[]}
+      data={colors}
       keyExtractor={item => item.paletteName}
       renderItem={({ item }) => (
         <PalettePreview
