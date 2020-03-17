@@ -24,12 +24,11 @@ const MainStackScreen = () => {
 
 const App = () => (
   <NavigationContainer>
-    <RootStack.Navigator>
-      <RootStack.Screen name="Home" component={Home} />
+    <RootStack.Navigator mode="modal">
       <RootStack.Screen
-        name="ColorPalette"
-        component={ColorPalette}
-        options={({ route }) => ({ title: route.params.paletteName })}
+        name="Main"
+        component={MainStackScreen}
+        options={{ headerShown: false }}
       />
     </RootStack.Navigator>
   </NavigationContainer>
