@@ -6,21 +6,23 @@ import PalettePreview from '../components/PalettePreview';
 
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
-export default ({ navigation }) => (
-  <FlatList
-    style={styles.list}
-    data={COLOR_PALETTE}
-    keyExtractor={item => item.paletteName}
-    renderItem={({ item }) => (
-      <PalettePreview
-        handlePress={() => {
-          navigation.navigate('ColorPalette', item);
-        }}
-        palette={item}
-      />
-    )}
-  />
-);
+export default ({ navigation }) => {
+  return (
+    <FlatList
+      style={styles.list}
+      data={[]}
+      keyExtractor={item => item.paletteName}
+      renderItem={({ item }) => (
+        <PalettePreview
+          handlePress={() => {
+            navigation.navigate('ColorPalette', item);
+          }}
+          palette={item}
+        />
+      )}
+    />
+  );
+};
 
 const styles = StyleSheet.create({
   list: {
