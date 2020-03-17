@@ -7,6 +7,7 @@ const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 export default ({ navigation }) => {
   const [colorPalettes, setColorPalettes] = useState([]);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const fetchColorPalettes = useCallback(async () => {
     const response = await fetch(URL);
