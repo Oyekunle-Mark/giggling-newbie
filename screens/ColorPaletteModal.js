@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 export default () => {
   const [name, setName] = useState('');
+
+  const handleSubmit = useCallback(() => {
+    if (!name) {
+      Alert.alert('Please enter palette name');
+    }
+  }, [name]);
 
   return (
     <View style={styles.container}>
@@ -19,7 +26,7 @@ export default () => {
         onChangeText={setName}
         placeholder="Palette name"
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
     </View>
