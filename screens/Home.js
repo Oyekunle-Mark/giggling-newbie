@@ -43,6 +43,8 @@ export default ({ navigation }) => {
           palette={item}
         />
       )}
+      refreshing={isRefreshing}
+      onRefresh={handleRefresh}
     />
   );
 };
