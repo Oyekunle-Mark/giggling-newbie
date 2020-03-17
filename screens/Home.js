@@ -18,6 +18,10 @@ export default ({ navigation }) => {
     }
   }, []);
 
+  useEffect(() => {
+    fetch_colors();
+  }, []);
+
   return (
     <FlatList
       style={styles.list}
