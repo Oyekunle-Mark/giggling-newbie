@@ -19,6 +19,7 @@ export default ({ navigation }) => {
 
   useEffect(() => {
     fetchColorPalettes();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
