@@ -35,7 +35,6 @@ const App = () => (
         name="ColorPaletteModal"
         component={ColorPaletteModal}
       />
-      ;
     </RootStack.Navigator>
   </NavigationContainer>
 );
