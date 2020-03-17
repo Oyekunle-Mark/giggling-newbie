@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 
 import PalettePreview from '../components/PalettePreview';
