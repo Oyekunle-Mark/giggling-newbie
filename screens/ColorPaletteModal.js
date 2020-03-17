@@ -12,7 +12,13 @@ export default () => {
 
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} value={name} onChangeText={setName} />
+      <Text style={styles.name}>Name of the palette</Text>
+      <TextInput
+        style={styles.input}
+        value={name}
+        onChangeText={setName}
+        placeholder="Palette name"
+      />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
@@ -29,7 +35,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   container: {
-    padding: 5,
+    padding: 10,
     backgroundColor: 'white',
     flex: 1,
   },
@@ -43,5 +49,8 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  name: {
+    marginBottom: 10,
   },
 });
