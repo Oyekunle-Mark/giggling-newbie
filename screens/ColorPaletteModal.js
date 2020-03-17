@@ -8,12 +8,14 @@ import {
   Alert,
 } from 'react-native';
 
-export default () => {
+export default ({ navigation }) => {
   const [name, setName] = useState('');
 
   const handleSubmit = useCallback(() => {
     if (!name) {
       Alert.alert('Please enter palette name');
+    } else {
+      navigation.goBack();
     }
   }, [name]);
 
