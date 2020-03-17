@@ -2,7 +2,9 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 
 import PalettePreview from '../components/PalettePreview';
-import { COLOR_PALETTE } from '../data';
+// import { COLOR_PALETTE } from '../data';
+
+const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 export default ({ navigation }) => (
   <FlatList
