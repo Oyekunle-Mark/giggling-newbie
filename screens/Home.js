@@ -7,14 +7,14 @@ import PalettePreview from '../components/PalettePreview';
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 export default ({ navigation }) => {
-  const [colors, setColors] = useState([]);
+  const [colorPalettes, setColorPalettes] = useState([]);
 
   const fetch_colors = useCallback(async () => {
     const response = await fetch(URL);
     const color_resp = await response.json();
 
     if (response.ok) {
-      setColors(color_resp);
+      setColorPalettes(color_resp);
     }
   }, []);
 
@@ -25,7 +25,7 @@ export default ({ navigation }) => {
   return (
     <FlatList
       style={styles.list}
-      data={colors}
+      data={colorPalettes}
       keyExtractor={item => item.paletteName}
       renderItem={({ item }) => (
         <PalettePreview
