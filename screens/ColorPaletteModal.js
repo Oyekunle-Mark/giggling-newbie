@@ -25,6 +25,18 @@ export default ({ navigation }) => {
     }
   }, [name]);
 
+  const handleValueChange = useCallback((value, color) => {
+    if (value) {
+      setSelectedColors(colors => [...colors, color]);
+    } else {
+      setSelectedColors(colors =>
+        colors.filter(
+          selectedColor => selectedColor.colorName !== color.colorName,
+        ),
+      );
+    }
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.name}>Name of the palette</Text>
@@ -42,9 +54,11 @@ export default ({ navigation }) => {
             <Text>{item.colorName}</Text>
             <Switch
               value={
-                !!selectColors.find(color => color.name === item.colorName)
+                !!selectColors.find(color => color.colorName === item.colorName)
               }
-              onValueChange={() => {}}
+              onValueChange={selected => {
+                handleValueChange(selected, item);
+              }}
             />
           </View>
         )}
