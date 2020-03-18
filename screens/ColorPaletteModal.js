@@ -15,7 +15,7 @@ export default ({ navigation }) => {
     if (!name) {
       Alert.alert('Please enter palette name');
     } else {
-      navigation.goBack();
+      navigation.navigate('Home');
     }
   }, [name]);
 
