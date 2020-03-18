@@ -7,7 +7,10 @@ import {
   TouchableOpacity,
   Alert,
   Switch,
+  FlatList,
 } from 'react-native';
+
+import { COLORS } from '../data';
 
 export default ({ navigation }) => {
   const [name, setName] = useState('');
