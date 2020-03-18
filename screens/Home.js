@@ -34,7 +34,7 @@ export default ({ navigation, route }) => {
 
   useEffect(() => {
     if (newColorPallete) {
-      setColorPalettes(palettes => [newColorPallete, ...colorPalettes]);
+      setColorPalettes(palettes => [newColorPallete, ...palettes]);
     }
   }, [newColorPallete]);
 
