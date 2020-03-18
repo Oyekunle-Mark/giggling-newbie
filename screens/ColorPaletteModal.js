@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  Switch,
 } from 'react-native';
 
 export default ({ navigation }) => {
@@ -29,6 +30,10 @@ export default ({ navigation }) => {
         onChangeText={setName}
         placeholder="Palette name"
       />
+      <View style={styles.color}>
+        <Text>Color Name</Text>
+        <Switch value={true} onValueChange={() => {}} />
+      </View>
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
@@ -62,5 +67,13 @@ const styles = StyleSheet.create({
   },
   name: {
     marginBottom: 10,
+  },
+  color: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: 'grey',
   },
 });
