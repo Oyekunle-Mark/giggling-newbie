@@ -19,11 +19,13 @@ export default ({ navigation }) => {
   const handleSubmit = useCallback(() => {
     if (!name) {
       Alert.alert('Please enter palette name');
+    } else if (selectColors.length < 3) {
+      Alert.alert('Please add at least 3 colors');
     } else {
       const newColorPallete = { paletteName: name, colors: [] };
       navigation.navigate('Home', { newColorPallete });
     }
-  }, [name]);
+  }, [name, selectColors]);
 
   const handleValueChange = useCallback((value, color) => {
     if (value) {
