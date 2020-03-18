@@ -33,10 +33,17 @@ export default ({ navigation }) => {
         onChangeText={setName}
         placeholder="Palette name"
       />
-      <View style={styles.color}>
-        <Text>Color Name</Text>
-        <Switch value={true} onValueChange={() => {}} />
-      </View>
+      <FlatList
+        data={COLORS}
+        keyExtractor={item => item.colorName}
+        renderItem={({ item }) => (
+          <View style={styles.color}>
+            <Text>{item.colorName}</Text>
+            <Switch value={true} onValueChange={() => {}} />
+          </View>
+        )}
+      />
+
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
