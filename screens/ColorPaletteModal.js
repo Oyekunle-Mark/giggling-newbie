@@ -22,7 +22,7 @@ export default ({ navigation }) => {
     } else if (selectedColor.length < 3) {
       Alert.alert('Please add at least 3 colors');
     } else {
-      const newColorPallete = { paletteName: name, colors: [] };
+      const newColorPallete = { paletteName: name, colors: selectedColor };
       navigation.navigate('Home', { newColorPallete });
     }
   }, [name, selectedColor]);
@@ -33,7 +33,7 @@ export default ({ navigation }) => {
     } else {
       setSelectedColors(colors =>
         colors.filter(
-          selectedColor => selectedColor.colorName !== color.colorName,
+          currentColor => currentColor.colorName !== color.colorName,
         ),
       );
     }
@@ -56,7 +56,9 @@ export default ({ navigation }) => {
             <Text>{item.colorName}</Text>
             <Switch
               value={
-                !!selectedColor.find(color => color.colorName === item.colorName)
+                !!selectedColor.find(
+                  color => color.colorName === item.colorName,
+                )
               }
               onValueChange={selected => {
                 handleValueChange(selected, item);
