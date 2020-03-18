@@ -15,7 +15,7 @@ export default ({ navigation }) => {
     if (!name) {
       Alert.alert('Please enter palette name');
     } else {
-      const newColorPallete = { name, colors: [] };
+      const newColorPallete = { paletteName: name, colors: [] };
       navigation.navigate('Home', { newColorPallete });
     }
   }, [name]);

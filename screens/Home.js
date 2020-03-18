@@ -31,6 +31,12 @@ export default ({ navigation, route }) => {
     fetchColorPalettes();
   }, []);
 
+  useEffect(() => {
+    if (newColorPallete) {
+      setColorPalettes(palettes => [newColorPallete, ...colorPalettes]);
+    }
+  }, [newColorPallete]);
+
   return (
     <FlatList
       style={styles.list}
