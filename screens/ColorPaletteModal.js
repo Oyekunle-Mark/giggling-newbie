@@ -14,18 +14,18 @@ import { COLORS } from '../data';
 
 export default ({ navigation }) => {
   const [name, setName] = useState('');
-  const [selectColors, setSelectedColors] = useState([]);
+  const [selectedColor, setSelectedColors] = useState([]);
 
   const handleSubmit = useCallback(() => {
     if (!name) {
       Alert.alert('Please enter palette name');
-    } else if (selectColors.length < 3) {
+    } else if (selectedColor.length < 3) {
       Alert.alert('Please add at least 3 colors');
     } else {
       const newColorPallete = { paletteName: name, colors: [] };
       navigation.navigate('Home', { newColorPallete });
     }
-  }, [name, selectColors]);
+  }, [name, selectedColor]);
 
   const handleValueChange = useCallback((value, color) => {
     if (value) {
@@ -56,7 +56,7 @@ export default ({ navigation }) => {
             <Text>{item.colorName}</Text>
             <Switch
               value={
-                !!selectColors.find(color => color.colorName === item.colorName)
+                !!selectedColor.find(color => color.colorName === item.colorName)
               }
               onValueChange={selected => {
                 handleValueChange(selected, item);
