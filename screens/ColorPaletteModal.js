@@ -14,6 +14,7 @@ import { COLORS } from '../data';
 
 export default ({ navigation }) => {
   const [name, setName] = useState('');
+  const [selectColors, setSelectedColors] = useState([]);
 
   const handleSubmit = useCallback(() => {
     if (!name) {
@@ -39,7 +40,12 @@ export default ({ navigation }) => {
         renderItem={({ item }) => (
           <View style={styles.color}>
             <Text>{item.colorName}</Text>
-            <Switch value={true} onValueChange={() => {}} />
+            <Switch
+              value={
+                !!selectColors.find(color => color.name === item.colorName)
+              }
+              onValueChange={() => {}}
+            />
           </View>
         )}
       />
