@@ -57,7 +57,7 @@ export default ({ navigation, route }) => {
           onPress={() => {
             navigation.navigate('ColorPaletteModal');
           }}>
-          <Text>Launch Modal</Text>
+          <Text style={styles.buttonText}>Add a color scheme</Text>
         </TouchableOpacity>
       }
     />
@@ -68,5 +68,11 @@ const styles = StyleSheet.create({
   list: {
     padding: 10,
     backgroundColor: 'white',
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'teal',
+    marginBottom: 10,
   },
 });
