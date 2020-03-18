@@ -5,7 +5,10 @@ import PalettePreview from '../components/PalettePreview';
 
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
-export default ({ navigation }) => {
+export default ({ navigation, route }) => {
+  const newColorPallete = route.params
+    ? route.params.newColorPallete
+    : undefined;
   const [colorPalettes, setColorPalettes] = useState([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
