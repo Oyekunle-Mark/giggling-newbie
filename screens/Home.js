@@ -6,11 +6,12 @@ import PalettePreview from '../components/PalettePreview';
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 export default ({ navigation, route }) => {
+  const [colorPalettes, setColorPalettes] = useState([]);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
   const newColorPallete = route.params
     ? route.params.newColorPallete
     : undefined;
-  const [colorPalettes, setColorPalettes] = useState([]);
-  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const fetchColorPalettes = useCallback(async () => {
     const response = await fetch(URL);
